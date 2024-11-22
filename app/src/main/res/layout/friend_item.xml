@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/chat_item.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_profile"
+        android:layout_alignParentStart="true" />
+
+    <!-- Chat Title (Name) -->
+    <TextView
+        android:id="@+id/friend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/profile_image"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:text="Chat Title"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/call"
+            android:src="@drawable/telephone"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerCrop"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+        <ImageButton
+            android:id="@+id/videocall"
+            android:src="@drawable/video_call"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerCrop"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/menu/bottom_navigation_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_messages"
+        android:icon="@drawable/ic_message"
+        android:title="Tin nhắn" />
+    <item
+        android:id="@+id/nav_contacts"
+        android:icon="@drawable/ic_contacts"
+        android:title="Danh bạ" />
+    <item
+        android:id="@+id/nav_explore"
+        android:icon="@drawable/ic_explore"
+        android:title="Khám phá" />
+    <item
+        android:id="@+id/nav_diary"
+        android:icon="@drawable/ic_diary"
+        android:title="Nhật ký" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="Cá nhân" />
+</menu>

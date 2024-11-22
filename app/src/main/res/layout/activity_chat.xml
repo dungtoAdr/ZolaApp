@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ChatActivity">
+
+    <!-- Toolbar trên cùng -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_chat"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1FAEEB"
+        android:elevation="4dp"
+        app:title="Name user"
+        app:titleTextColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imgsearch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_search"
+                android:contentDescription="Search" />
+
+            <ImageView
+                android:id="@+id/img_mess"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_new_message"
+                android:contentDescription="New Message" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_explore"
+                android:contentDescription="Explore" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Nội dung trò chuyện (phần này có thể là RecyclerView/ListView) -->
+    <FrameLayout
+        android:id="@+id/chat_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/chat_input_area"
+        android:layout_below="@id/toolbar_chat"
+        android:background="#F0F0F0" />
+
+    <!-- Thanh nhập tin nhắn ở dưới cùng -->
+    <RelativeLayout
+        android:id="@+id/chat_input_area"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+        <ImageView
+            android:id="@+id/icon_message"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_send_24"
+            android:layout_alignParentStart="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+        <EditText
+            android:id="@+id/edit_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/send_message"
+            android:layout_toEndOf="@id/icon_message"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:background="@color/white"
+            android:hint="Nhập tin nhắn"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/send_message"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_send_24"
+            android:contentDescription="Send Message" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/chat_item.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_profile"
+        android:layout_alignParentStart="true" />
+
+    <!-- Chat Title (Name) -->
+    <TextView
+        android:id="@+id/chat_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/profile_image"
+        android:layout_marginStart="8dp"
+        android:text="Chat Title"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <!-- Chat Preview (Last Message) -->
+    <TextView
+        android:id="@+id/chat_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/profile_image"
+        android:layout_below="@id/chat_title"
+        android:layout_marginStart="8dp"
+        android:text="Last message preview here..."
+        android:textSize="14sp"
+        android:textColor="#888888" />
+
+    <!-- Time of Last Message -->
+    <TextView
+        android:id="@+id/chat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="5 phút"
+        android:textSize="12sp"
+        android:textColor="#888888" />
+
+    <!-- Unread Message Badge -->
+    <TextView
+        android:id="@+id/unread_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/chat_time"
+        android:layout_below="@id/chat_time"
+        android:padding="4dp"
+        android:text="N"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/badge_background"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

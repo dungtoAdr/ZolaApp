@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/chat_item.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_profile"
+        android:layout_alignParentStart="true" />
+
+    <!-- Chat Title (Name) -->
+    <TextView
+        android:id="@+id/friend_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/image"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:text="Chat Title"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/bt_accept"
+            android:src="@drawable/ic_new_message"
+            android:background="@color/black"
+            android:layout_marginEnd="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+        <ImageView
+            android:id="@+id/bt_deline"
+            android:src="@drawable/zalo"
+            android:layout_marginEnd="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

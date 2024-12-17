@@ -17,19 +17,19 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.zolaapp.R;
 
 public class ChatActivity extends AppCompatActivity {
-    private Toolbar toolbar_chat;
+    private Toolbar toolbar_chat1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-        toolbar_chat=findViewById(R.id.toolbar_chat);
+        toolbar_chat1=findViewById(R.id.toolbar_chat);
         Intent intent=getIntent();
         String name=intent.getStringExtra("name");
         ActionBar(name);
     }
     public void ActionBar(String name){
-        setSupportActionBar(toolbar_chat);
+        setSupportActionBar(toolbar_chat1);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar_chat.setTitle(name);
+        toolbar_chat1.setTitle(name);
     }
 }
